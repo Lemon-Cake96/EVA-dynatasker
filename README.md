@@ -7,7 +7,7 @@ Gestionaire de Taches (en js).
         -Titre
         -description
         -echeance
-    -taches checker
+    -tache checker
     -modification de taches ou suppression.
     -Filtrage :
         -Finis
@@ -25,6 +25,8 @@ TOOLS:
 
 _________________________________________________________________________________________________________
 
-UTILISATION :
+--------------------------------------------VERSION 1 ---------------------------------------------------
+Attempt to make the form function with only js and HTML display.
+
 
 
