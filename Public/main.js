@@ -65,6 +65,7 @@ function divTaskMaker(task,description,date){
     //adding functionality to the delete button
     btnDelete.addEventListener("click", function (){
         newDiv.remove();
+        //TODO:add an alert to make sure you wanted to delete
     });
 
 
