@@ -1,6 +1,8 @@
 const root = document.getElementById("root");
 const task_zone = document.getElementById("task_zone");
+let divID = 0;
 let info;
+
 //test
 document.getElementById("test").addEventListener("click", function(){
     let testdescription = document.getElementById("test_description");
@@ -34,15 +36,15 @@ function getInfo(){
 
 function divTaskMaker(task,description,date){
     
+    //TODO :figure out new counter for a json file.
     //need a counter that increases on each div made
-    let divID;
     
     //creating new div and adding it's style
     let newDiv = document.createElement("div");
     divID++
     newDivStyle = "w-full border-2 border-red-800 grid grid-cols-3"
     newDiv.setAttribute("class",newDivStyle);
-    newDiv.setAttribute("id",divID);
+    newDiv.setAttribute("id",`task:${divID}`);
 
     task_zone.appendChild(newDiv);
 
@@ -51,13 +53,15 @@ function divTaskMaker(task,description,date){
     let statusArticle = document.createElement("article");
     let dateArticle = document.createElement("article");
     let descriptionArticle = document.createElement("article");
+    
+    //addings the buttons for modify and delete task
 
     newDiv.appendChild(nameArticle);
     newDiv.appendChild(statusArticle);
     newDiv.appendChild(dateArticle);
     newDiv.appendChild(descriptionArticle);
 
-    //
+    //sets up the value of our form
 
     nameArticle.innerHTML = task;
     statusArticle.innerHTML = "Pending";
