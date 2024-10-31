@@ -18,17 +18,17 @@
                 </textarea>
                 <label class="m-2" for="date">Date :</label>
                 <input id="date" type="date" name="date"class="border-2 border-black rounded m-2">
-                <button id="addtask" type="button" class="bg-sky-300 p-2 rounded">Add Task</button>
+                <button id="addtask" type="button" class="bg-sky-300 p-2 rounded hover:bg-sky-500">Add Task</button>
             </form>
         </section>
-        <section class="border-4 border-red-500 col-span-10">
+        <section id="task_zone" class="border-4 border-red-500 col-span-10">
             <article>zone test</article>
-            <div id="test" class="w-full border-2 border-red-800 grid grid-cols-3">
+            <div id="test" class="w-full border-2 border-red-800 grid grid-cols-3 hover:bg-red-50">
                 <article>Task Name Goes here</article>
                 <article>STATUS</article>
                 <article>DATE</article>
-                <article id="test_description" class="border-2 border-yellow-500 col-span-3 hidden">DESCRIPTION WILL GO HERE</article>
             </div>
+            <article id="test_description" class="border-2 border-yellow-500 w-full hidden">DESCRIPTION WILL GO HERE</article>
         </section>
     </div>
     <script src="main.js"></script>
