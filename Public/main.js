@@ -20,6 +20,10 @@ document.getElementById("addtask").addEventListener("click", function (){
     divTaskMaker(info[0],info[1],info[2]);
 });
 
+//test click event to delete task
+//document.getElementById(this).addEventListener("click"),console.log(this);
+
+
 
 function getInfo(){
 
@@ -54,19 +58,31 @@ function divTaskMaker(task,description,date){
     let dateArticle = document.createElement("article");
     let descriptionArticle = document.createElement("article");
     
-    //addings the buttons for modify and delete task
+    //adding the buttons for modify and delete task
+    let btnDelete = document.createElement("button");
+    let btnModify = document.createElement("button");
+
+    //adding functionality to the delete button
+    btnDelete.addEventListener("click", function (){
+        newDiv.remove();
+    });
+
 
     newDiv.appendChild(nameArticle);
     newDiv.appendChild(statusArticle);
     newDiv.appendChild(dateArticle);
     newDiv.appendChild(descriptionArticle);
+    newDiv.appendChild(btnModify);
+    newDiv.appendChild(btnDelete);
 
     //sets up the value of our form
 
     nameArticle.innerHTML = task;
     statusArticle.innerHTML = "Pending";
-    dateArticle.innerHTML = date
-    descriptionArticle.innerHTML = description
+    dateArticle.innerHTML = date;
+    descriptionArticle.innerHTML = description;
+    btnModify.innerHTML = "Modify Task";
+    btnDelete.innerHTML = "Delete Task";
 
 }
 
