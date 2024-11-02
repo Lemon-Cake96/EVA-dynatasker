@@ -68,7 +68,7 @@ function divTaskMaker(task,description,date){
     statusArticle.innerHTML = "Pending"; //call a function or maybe add button that changes the value and store here
     dateArticle.innerHTML = date;
     descriptionArticle.innerHTML = description;
-    btnModify.innerHTML = "Modify Task";
+    btnModify.innerHTML = "Edit Task";
     btnDelete.innerHTML = "Delete Task";
 
 
@@ -89,6 +89,17 @@ function divTaskMaker(task,description,date){
         let nameInput = document.createElement("input");
         let dateInput = document.createElement("input");
         let descriptionInput = document.createElement("input");
+
+        //settings of the inputs
+
+        nameInput.type = "text";
+        dateInput.type = "date";
+        descriptionInput.type = "text";
+
+        nameInput.value = nameArticle.innerHTML;
+        dateInput.value = dateArticle.innerHTML;
+        descriptionInput.value = descriptionArticle.innerHTML;
+
 
     });
 
