@@ -62,12 +62,38 @@ function divTaskMaker(task,description,date){
     let btnDelete = document.createElement("button");
     let btnModify = document.createElement("button");
 
+    //sets up the value of our form
+
+    nameArticle.innerHTML = task;
+    statusArticle.innerHTML = "Pending"; //call a function or maybe add button that changes the value and store here
+    dateArticle.innerHTML = date;
+    descriptionArticle.innerHTML = description;
+    btnModify.innerHTML = "Modify Task";
+    btnDelete.innerHTML = "Delete Task";
+
+
     //adding functionality to the delete button
     btnDelete.addEventListener("click", function (){
         newDiv.remove();
         //TODO:add an alert to make sure you wanted to delete
     });
 
+    /* Idea :
+    Transform whats inside the div as articles into inputs and save the values and replace them.
+    There's a .replaceChild() to swap out elements
+    */
+
+    //adding functionality to the modify button
+    btnModify.addEventListener("click", function(){
+        
+        let nameInput = document.createElement("input");
+        let dateInput = document.createElement("input");
+        let descriptionInput = document.createElement("input");
+
+    });
+
+
+    //display everything
 
     newDiv.appendChild(nameArticle);
     newDiv.appendChild(statusArticle);
@@ -75,15 +101,6 @@ function divTaskMaker(task,description,date){
     newDiv.appendChild(descriptionArticle);
     newDiv.appendChild(btnModify);
     newDiv.appendChild(btnDelete);
-
-    //sets up the value of our form
-
-    nameArticle.innerHTML = task;
-    statusArticle.innerHTML = "Pending";
-    dateArticle.innerHTML = date;
-    descriptionArticle.innerHTML = description;
-    btnModify.innerHTML = "Modify Task";
-    btnDelete.innerHTML = "Delete Task";
 
 }
 
