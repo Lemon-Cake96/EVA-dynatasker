@@ -133,6 +133,8 @@ function divTaskMaker(task,description,date){
 
             //reswap the button
             btnModify.innerHTML = "Edit Task";
+            
+            //event listener is beeing called even on modify button
             btnModify.onclick = null;
         };
 
