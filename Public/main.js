@@ -90,7 +90,7 @@ function divTaskMaker(task,description,date){
         let dateInput = document.createElement("input");
         let descriptionInput = document.createElement("input");
 
-        //settings of the inputs
+        //settings of the inputs TODO:add styles to the modif
 
         nameInput.type = "text";
         dateInput.type = "date";
@@ -99,6 +99,17 @@ function divTaskMaker(task,description,date){
         nameInput.value = nameArticle.innerHTML;
         dateInput.value = dateArticle.innerHTML;
         descriptionInput.value = descriptionArticle.innerHTML;
+
+        //replace elements test
+
+        newDiv.replaceChild(nameInput,nameArticle);
+        newDiv.replaceChild(dateInput,dateArticle);
+        newDiv.replaceChild(descriptionInput,descriptionArticle);
+
+        //replace the buttons
+
+
+
 
 
     });
