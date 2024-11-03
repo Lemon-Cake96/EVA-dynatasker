@@ -105,8 +105,24 @@ function divTaskMaker(task,description,date){
         newDiv.replaceChild(nameInput,nameArticle);
         newDiv.replaceChild(dateInput,dateArticle);
         newDiv.replaceChild(descriptionInput,descriptionArticle);
+        btnModify.innerHTML = "Save Changes";
+        
+        //need to save changes done by modification, ".click()" doesnt work.
+        //test ".onclick()"
 
-        //replace the buttons
+        btnModify.onclick(function (){
+            console.log("save button pressed");
+
+            nameArticle.innerHTML = nameInput.value;
+            dateArticle.innerHTML = dateInput.value;
+            descriptionArticle.innerHTML = descriptionInput.value;
+
+            newDiv.replaceChild(nameArticle,nameInput);
+            newDiv.replaceChild(dateArticle,dateInput);
+            newDiv.replaceChild(descriptionArticle,descriptionInput);
+        });
+
+    
 
 
 
