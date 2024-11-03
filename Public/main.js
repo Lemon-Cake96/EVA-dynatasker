@@ -71,6 +71,15 @@ function divTaskMaker(task,description,date){
     btnModify.innerHTML = "Edit Task";
     btnDelete.innerHTML = "Delete Task";
 
+    //display everything
+
+    newDiv.appendChild(nameArticle);
+    newDiv.appendChild(statusArticle);
+    newDiv.appendChild(dateArticle);
+    newDiv.appendChild(descriptionArticle);
+    newDiv.appendChild(btnModify);
+    newDiv.appendChild(btnDelete);
+
 
     //adding functionality to the delete button
     btnDelete.addEventListener("click", function (){
@@ -110,8 +119,8 @@ function divTaskMaker(task,description,date){
         //need to save changes done by modification, ".click()" doesnt work.
         //test ".onclick()"
 
-        btnModify.onclick(function (){
-            console.log("save button pressed");
+        btnModify.onclick = function (){
+            //console.log("save button pressed");
 
             nameArticle.innerHTML = nameInput.value;
             dateArticle.innerHTML = dateInput.value;
@@ -120,25 +129,13 @@ function divTaskMaker(task,description,date){
             newDiv.replaceChild(nameArticle,nameInput);
             newDiv.replaceChild(dateArticle,dateInput);
             newDiv.replaceChild(descriptionArticle,descriptionInput);
-        });
 
-    
-
-
-
-
+            //reswap the button
+            btnModify.innerHTML = "Edit Task";
+            
+        };
 
     });
-
-
-    //display everything
-
-    newDiv.appendChild(nameArticle);
-    newDiv.appendChild(statusArticle);
-    newDiv.appendChild(dateArticle);
-    newDiv.appendChild(descriptionArticle);
-    newDiv.appendChild(btnModify);
-    newDiv.appendChild(btnDelete);
 
 }
 
