@@ -94,6 +94,7 @@ function divTaskMaker(task,description,date){
 
     //adding functionality to the modify button
     btnModify.addEventListener("click", function(){
+        console.log("clicked");
         
         let nameInput = document.createElement("input");
         let dateInput = document.createElement("input");
@@ -120,7 +121,7 @@ function divTaskMaker(task,description,date){
         //test ".onclick()"
 
         btnModify.onclick = function (){
-            //console.log("save button pressed");
+            console.log("save button pressed");
 
             nameArticle.innerHTML = nameInput.value;
             dateArticle.innerHTML = dateInput.value;
@@ -132,7 +133,7 @@ function divTaskMaker(task,description,date){
 
             //reswap the button
             btnModify.innerHTML = "Edit Task";
-            
+            btnModify.onclick = null;
         };
 
     });
